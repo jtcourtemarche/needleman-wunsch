@@ -33,14 +33,14 @@ struct EditMatrix {
 
 impl EditMatrix {
     // construct edit distance object 
-    fn new(seq1: String, seq2: String) -> EditMatrix {
+    fn new(seq1: String, seq2: String) -> Self {
         let first = seq1.trim();
         let second = seq2.trim();
 
         let n = first.chars().count();
         let m = second.chars().count();
 
-        EditMatrix{
+        Self {
             first: String::from(first),
             second: String::from(second),
             N: n,
